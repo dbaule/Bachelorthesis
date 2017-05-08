@@ -12,4 +12,4 @@ Furthermore, it provides the comparison algorithm, which compares two data sets 
 
 The following image highlights the five steps of my approach:
 
-[[https://github.com/dbaule/Bachelorthesis/blob/master/ApproachLifecycle.png|alt=octocat]]
+![alt text](https://github.com/dbaule/Bachelorthesis/blob/master/ApproachLifecycle.png)
