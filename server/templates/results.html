@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comparison Results</title>
+        <style>
+            img{
+                width:50%
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width:100%" 
+               border="1px solid black"     
+               border-collapse="collapse">
+               {{with .ViewControllerResults}}
+               {{range .}}
+            <tr>
+                <td colspan="2">
+                    <b>Comparison of {{.ViewControllerName}}</b>
+                </td>
+            </tr>
+            <tr>
+                <th>Build Version {{.InitBV}}</th>
+                <th>Build Version {{.NewBV}}</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img src="{{.InitScreenshot|safeURL}}" alt="Pic 1">
+                </td>
+                <td align="center">
+                    <img src={{.NewScreenshot|safeURL}} alt="Pic 2">
+                </td>
+            </tr>
+            {{with .Errors}}
+            {{range .}}
+            <tr>
+                <td>{{.InitMessage}}</td>
+                <td>{{.NewMessage}}</td>
+            </tr>
+            {{end}}
+            {{end}}
+            <tr>
+                <td colspan="2">
+                    <b>Found a total of {{.NumErrors}} inconsistencies on {{.ViewControllerName}}</b>
+                </td>
+            </tr>
+            <tr></tr>
+            {{end}}
+            {{end}}
+        </table>
+    </body>
+</html>
