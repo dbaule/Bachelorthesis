@@ -10,4 +10,6 @@ The extracted information is saved in a mongoDB database.
 The server component handles the interaction between client library and database.
 Furthermore, it provides the comparison algorithm, which compares two data sets with each other and generates a comparison report.
 
+The following image highlights the five steps of my approach:
 
+[[https://github.com/dbaule/Bachelorthesis/blob/master/ApproachLifecycle.png|alt=octocat]]
